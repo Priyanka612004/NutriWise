@@ -1,0 +1,212 @@
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+.heading{
+    background-color: #3F7229;
+    color: #fff;
+    padding: 50px 80px ;
+    /* margin: 0px 0px 8px 0px; */
+}
+.heading #head{
+    display: flex;
+    flex-direction:row;
+}
+.heading #head .scaned{
+    text-align: right;
+    padding-top: 15px;
+    width: 30%;
+}
+.heading #head .scaned i{
+    color: #fff;
+    font-size: 80px;
+}
+.heading h1{
+        font-weight: 400;
+        font-size: 70px;
+}
+.heading h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+.heading .p2{
+    padding: 20px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.items{
+    height: 280px;
+    /* width: 100%; */
+    display: flex;
+    /* background-color: #3F7229; */
+    padding: 0px 10px;
+    margin: 30px 30px;
+    border: 5px solid whitesmoke;
+}
+#scanimage{
+    width: 280px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#scanimage img{
+    height: 200px;
+    width: 200px;
+}
+#scaninfo{
+    /* background-color: aqua; */
+    width: 50%;
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center; */
+}
+.healthiness{
+    display: flex;
+}
+.sub_info{
+    font-size: 18px;
+}   
+.ppercentage{
+    width: 30%;
+    /* background-color: #3F7229; */
+}
+.perp{
+    font-size: 18px;
+    padding-top: 20px;
+}
+/* .percentage #img1{
+    padding-top: 10px;
+    height: 120px;
+    width: 120px;
+}
+.percentage #img2{
+    height: 150px;
+    width: 150px;
+} */
+
+:root {
+    --progress-bar-width: 200px;
+    --progress-bar-height: 200px;
+    --font-size: 2rem;
+  }
+.circular-progress {
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .inner-circle {
+    position: absolute;
+    width: calc(var(--progress-bar-width) - 80px);
+    height: calc(var(--progress-bar-height) - 80px);
+    border-radius: 50%;
+    background-color: lightgrey;
+  }
+  
+  .percentage {
+    position: relative;
+    font-weight: 700;
+    font-size: var(--font-size);
+    color: rgb(0, 0, 0, 0.8);
+  }
+  
+  @media screen and (max-width: 800px) {
+    :root {
+      --progress-bar-width: 100px;
+      --progress-bar-height: 100px;
+      --font-size: 1.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    :root {
+      --progress-bar-width: 80px;
+      --progress-bar-height: 80px;
+      --font-size: 1rem;
+    }
+  }
+/* ........................................................ */
+
+
+@media screen and (max-width:700px) {
+
+.heading{
+    padding: 10px 30px ;
+}
+.heading h1{
+        font-size: 50px;
+}
+.heading h2{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.heading .p2{
+    font-size: 18px;
+}
+.items{
+    height: 150px;
+    display: flex;
+    padding: 0px 8px;
+    margin: 10px 10px;
+}
+#scanimage{
+    width: 80px;
+    /* background-color: antiquewhite; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+#scanimage img{
+    height: 110px;
+    width: 110px;
+}
+#scaninfo{
+    /* background-color: aqua; */
+    width: 40%;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* text-align: center; */
+}
+#scaninfo h1{
+    font-size: 20px;
+}
+#scaninfo h2{
+    font-size: 18px;
+}
+.sub_info{
+    font-size: 16px;
+}   
+.ppercentage{
+    width: 20%;
+    
+    /* background-color: #3F7229; */
+}
+.perp{
+    font-size: 16px;
+    padding-top: 10px;
+}
+.percentage #img1{
+    padding-top: 10px;
+    height: 80px;
+    width: 80px;
+}
+.percentage #img2{
+    height: 110px;
+    width: 110px;
+}
+br{
+    display: none;
+}
+}

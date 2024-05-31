@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Stylesheets/signin.css">
+    <title>Sign in</title>
+</head>
+<body>
+    <div class="full">
+        <h1>Sign In</h1>
+        <form action="/signin" method="post">
+            <div class="content1">
+                <div class="para">
+                    <div class="lab"><label for="Username"><span>Username</span></label></div>
+                    <div><input type="text" id="Username" style='text-align:left; font-size:16px' name="username" placeholder="Username" required></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label for="Password"><span>Password</span></label></div>
+                    <div><input id="Password" type="password" style='text-align:left; font-size:16px' name="password" placeholder="Password" required></div>
+                </div>
+                <div id="login"><input class="button" type="submit" value="Submit"></div>
+                <br>
+                <p>Gain access to our Scan/Contact Us page <br>by securely Sign In first.</p><br>
+                <div class="reset"><p>Click on  <a href="/signup">Sign Up</a>  if not have an account</p></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

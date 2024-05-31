@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/scanner.css">
+  <title>QR Code Reader</title>
+  <!-- Include QuaggaJS library -->
+  <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+</head>
+<body>
+  <h1>QR Code Reader</h1>
+  <div id="video">
+  <video id="scanner"></video>
+  </div>
+  <script>
+    // Function to initialize QR code scanner
+    function initializeScanner() {
+      // Access user's camera
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          // Display camera stream in video element
+          var videoElement = document.getElementById('scanner');
+          videoElement.srcObject = stream;
+          videoElement.play();
+
+          // Initialize QuaggaJS scanner
+          Quagga.init({
+            inputStream: {
+              constraints: {
+                facingMode: 'environment' // Use rear camera if available
+              },
+              area: { // Define area for QR code scanning
+                top: 0,
+                right: 0,
+                bottom: 1,
+                left: 0
+              },
+              singleChannel: false // Enable color recognition
+            },
+            locator: {
+              patchSize: 'medium',
+              halfSample: true
+            },
+            numOfWorkers: navigator.hardwareConcurrency || 4,
+            decoder: {
+              readers: ['ean_reader'] // Specify QR code reader
+            },
+            locate: true
+          }, function(err) {
+            if (err) {
+              console.error('Failed to initialize Quagga: ', err);
+              return;
+            }
+            // Start Quagga scanner
+            Quagga.start();
+          });
+
+          // Register listener for successful QR code detection
+          Quagga.onDetected(function(result) {
+            alert('QR Code detected: ' + result.codeResult.code);
+            // Stop Quagga scanner after successful detection
+            Quagga.stop();
+          });
+        })
+        .catch(function(err) {
+          console.error('Error accessing camera: ', err);
+        });
+    }
+
+    // Call initializeScanner function when the page loads
+    window.onload = function() {
+      initializeScanner();
+    };
+  </script>
+</body>
+</html>

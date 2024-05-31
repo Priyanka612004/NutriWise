@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="/Stylesheets/contactus.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <% include ./partials/header.ejs %>
+    <div class="content1">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="content2">
+        <div class="sub" id="sub1">
+            <p>Contact us about anything related to our services. <br>
+            We'll do our best to get back to you as soon as possible.</p>
+            <form action="/contactus" method="post">
+                <div class="para">
+                    <div class="lab"><label><span>Name*</span></label></div>
+                    <div><input type="text" name="name" required></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label><span>Phone Number</span></label></div>
+                    <div><input type="text" name="phone"></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label><span>Email*</span></label></div>
+                    <div><input type="email" name="email" required></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label><span>Company</span></label></div>
+                    <div><input type="text" name="company"></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label><span>Subject*</span></label></div>
+                    <div><input id="Subject" type="text" name="subject" required></div>
+                </div>
+                <div class="para">
+                    <div class="lab"><label><span>Question*</span></label></div>
+                    <div><textarea name="question" required cols="50" rows="4"></textarea></div>
+                </div>
+                <input class="button" type="submit" value="submit">
+            </form>
+        </div>
+        <div class="sub" id="sub2">
+            <p>My Company</p>
+            <p><i class='bx bxs-phone' style='color:#000'></i> +1 (650) 555-0111</p>
+            <p><i class='bx bxs-envelope' style='color:#000'></i> info@yourcompany.example.com</p>
+        </div>
+    </div>
+    <% include ./partials/footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,217 @@
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+h1{
+    padding: 24px 80px ;
+    margin: 0px 0px 8px 0px;
+    font-weight: 400;
+    font-size: 45px;
+    color: #fff;
+    background-image: url(/All_Images/banner1.jpg);
+}
+.content1, .content2{
+    margin: 0px 30px;
+}
+.content2{
+    padding-top: 120px;
+    padding-bottom: 80px;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+.content2 #sub1{
+    /* background-color: aqua; */
+    text-align: left;
+    width: 50%;
+}
+.content1{
+    padding-top: 120px;
+    padding-bottom: 80px;
+    /* height: 100px; */
+    display: flex;
+}
+.content1 #sub1{
+    /* background-color: aqua; */
+    text-align: left;
+    width: 50%;
+}
+#sub1 #p1{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#sub1 #p2{
+    font-size: 40px;
+    padding: 40px;
+    padding-top: 0%;
+    padding-bottom: 15px;
+}
+#sub1 #p3{
+    font-size: 16px;
+    line-height: 25px;
+    padding: 40px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+#sub1 #p4{
+    display: none;
+    background-color:#000;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 8px;
+    margin: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+.content1 #sub2{
+    width: 50%;
+    text-align: center;
+    /* background-color: rgb(111, 255, 0); */
+}
+.content1 #sub2 img{
+    height: 450px;
+    width: 450px;
+    border-radius: 50px 250px 50px 250px;
+}
+.content2 #sub2{
+    width: 50%;
+    text-align: center;
+    /* background-color: rgb(111, 255, 0); */
+}
+.content2 #sub2 img{
+    height: 450px;
+    width: 450px;
+    border-radius: 50px 250px 50px 250px;
+}
+.content2 #sub1 #p3{
+    font-size: 24px;
+    font-weight: 500;
+}
+.content3{
+    background-color: #121c0e;
+    background-image:url(https://nutriwise1.odoo.com/web_editor/shape/web_editor/Rainy/08_001.svg?c1=%23FFFFFF&c4=%23FFFFFF);
+    padding-top: 55px;
+    padding-bottom: 55px;
+    text-align: center;
+}
+.content3 h4{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 500;
+}
+.content3 p{
+    color:#fff;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.content3 a{
+    text-decoration: none;
+    color:#fff;
+    line-height: 60px;
+}
+
+/* ...................................................... */
+
+@media screen and (max-width:700px) {
+    h1{
+        padding: 12px 0px ;
+        padding-left: 40px;
+    }
+    .content1, .content2{
+        margin: 0px 0px;padding: 0px 0px;
+        text-align:center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content2{
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    .content1{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .content1 #sub1{
+        width: 100%;
+    }
+    #sub1 #p1{
+        font-size: 16px;
+    }
+    #sub1 #p2{
+        font-size: 32px;
+        padding: 0px;
+        padding-top: 0%;
+        padding-bottom: 15px;
+        margin: 20px;
+    }
+    #sub1 #p3{
+        font-size: 16px;
+        line-height: 25px;
+        padding: 0px;
+        margin: 20px;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    #sub1 #p4{
+        margin: 20px;
+    }
+    .content1 #sub2{
+        width: 100%;
+        text-align:center;
+    }
+    .content1 #sub2 img{
+    height: 380px;
+    width: 380px;
+    border-radius: 20px;
+    }
+    .content2 #sub2{
+        width: 100%;
+        text-align: center;
+    }
+    .content2 #sub2 img{
+        height:380px;
+        width: 380px;
+        padding: 0px;
+        border-radius: 20px;
+    }
+    .content2 #sub1 #p3{
+        margin: 20px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 35px;
+        width: 350px;
+    }
+    .content3 h4{
+        margin-left: 50px;
+        margin-right: 50px;
+        text-align: center;
+        justify-content: center;
+        font-size: 40px;
+        color: #fff;
+        font-weight: 500;
+    }
+    .content3 p{
+        color:#fff;
+        line-height: 60px;
+        font-size: 26px;
+        font-weight: 400;
+    }
+    .content3 a{
+        text-decoration: none;
+        color:#fff;
+        line-height: 60px;
+    }
+        
+}

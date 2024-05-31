@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>NutriWise</title>
+</head>
+<body>
+    <% include ./partials/header.ejs %>
+    <div class="holebody"> 
+        <div class="content1">
+            <div class="logo">
+                <img src="/All_Images/Nutriwise logo.webp" alt="">
+                <h1>- NutriWise -</h1>
+                <span class="span">Your Wellness Companion.</span>
+            </div>
+            <div>
+                <a href="/contactus"><button class="getinvolved" id="con1but">Get involved</button></a>
+            </div>
+        </div>
+        <div class="content2">
+            <div id="sub1">
+                <p id="p1">ABOUT US</p>
+                <p id="p2">Empowering Healthier Choices with Smart Nutrition Technology</p>
+                <p id="p3">By scanning ingredients, users gain instant access to detailed nutritional information. Personalized recommendations cater to individual goals and preferences, while emphasis on meal timing enhances overall effectiveness. With its intuitive interface and commitment to privacy, Nutri Wise is the go-to tool for achieving balanced nutrition and well-being.  </p>
+                <a href=""><button id="p4">Learn More</button></a>
+            </div>
+            <div id="sub2">
+                <img src="/All_Images/Firefly a lady scanning a food i.jpg" alt="">
+            </div>
+        </div>
+        <div class="content3">
+            <h4>Changing the world is possible.
+                We’ve done it before.</h4>
+        </div>
+        <div class="content4">
+            <div id="col1" class="col">
+                <div ><img class="division1" src="/All_Images/meal manage.jpeg" alt=""></div>
+                <div class="division2"><p class="p1">Meal Management</p><p class="p2">Consider integrating meal timing recommendations as  Certain foods might be better consumed at specific times of the day. </p></div>
+                <div class="readmore"><button><a href="">Read More</a></button></div>
+            </div>
+            <div id="col2" class="col">
+                <div><img class="division1" src="/All_Images/Ingredients.jpg" alt=""></div>
+                <div class="division2"><p class="p1">Ingredient Analysis</p><p class="p2">Utilize a database of nutritional information to analyze the ingredients in the packed food.  </p></div>
+                    <div class="readmore"><button><a href="">Read More</a></button></div>
+            </div>
+            <div id="col3" class="col">
+                <div ><img class="division1" src="/All_Images/Health Rate.jpg" alt=""></div>
+                <div class="division2"><p class="p1">Health Ratings</p><p class="p2">Develop an algorithm to assess the overall healthiness of the food based on its ingredients and nutritional content.  </p></div>
+                <div class="readmore"><button><a href="">Read More</a></button></div>
+            </div>
+        </div>
+        <div class="content5">
+            <h4>"Fuel Your Life, Nourish Your Body: Nutri Wise Guides the Way!"</h4>
+            <p>Eat Heathy and Stay Healthy .</p>
+            <a href="/contactus"><button class="getinvolved">Contact Us</button></a>
+        </div>
+        <% include ./partials/footer.ejs %>
+        <script>
+            (function (w, d, s, o, f, js, fjs) {
+              w["botsonic_widget"] = o;
+              w[o] =
+                w[o] ||
+                function () {
+                  (w[o].q = w[o].q || []).push(arguments);
+                };
+              (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+              js.id = o;
+              js.src = f;
+              js.async = 1;
+              fjs.parentNode.insertBefore(js, fjs);
+            })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+            Botsonic("init", {
+              serviceBaseUrl: "https://api-azure.botsonic.ai",
+              token: "2f5e4ef6-437e-455d-81ea-f1b910c08f7d",
+            });
+          </script>
+        </div>
+    </body>
+</html>

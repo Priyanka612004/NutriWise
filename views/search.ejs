@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/scan.css">
+    <title>Search</title>
+    <style>
+        .topnav{
+            height: 60px;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: center;
+            background-color:#3F7229;
+        }
+        #input{
+            width: 80%;
+            font-size: 30px;
+            font-weight: 700;
+            color: #000;
+        }
+        @media screen and (max-width:700px) {
+            .topnav{
+                height: 60px;
+                padding: 20px 20px;
+                display: flex;
+                justify-content: center;
+                background-color:#3F7229;
+            }
+            #input{
+                width: 80%;
+                font-size: 30px;
+                font-weight: 700;
+                color: #000;;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <% include ./partials/header.ejs %>
+    <div class="topnav">
+        <input id="input" type="text" placeholder="Search..">
+      </div>
+      <div class="items">
+        <div id="scanimage"><img src="/All_Images/Kurkure.jpg_large" alt=""></div>
+        <div id="scaninfo">
+            <div><h1>Kurkure</h1></div><br>
+            <div class="sub_info"><i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <!-- <i class='bx bxs-star' style='color:#ffd700'  ></i> -->
+                <i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star-half' style='color:#ffd700' ></i>
+                <i class='bx bx-star' style='color:#ffd700' ></i>
+            </div><br>
+            <div class="sub_info"><p>Age: Above 6 Years</p></div><br>
+            <div class="sub_info"><p>Consumption Time: Afternoon </p></div><br>
+            <div class="healthiness" >
+                <i class='bx bxs-circle' style='color:#008000'  ></i>
+                <h2 style='color:#008000'> Good</h2> 
+            </div>
+            <!-- <i class='bx bxs-circle' style='color:#008000'  ></i>
+    <i class='bx bxs-circle' style='color:#0000ff'  ></i>
+    <i class='bx bxs-circle' style='color:#ff0000'  ></i> -->
+        </div>
+        <div class="ppercentage">
+            <p class="perp">Heathiness Ratings: </p>
+            <!-- <img id="img1" src="/All_Images/50-percent.jpg" alt=""> -->
+            <div class="circular-progress" data-inner-circle-color="#fff" data-percentage="60" data-progress-color="#3F7229" data-bg-color="whitesmoke">
+                <div class="inner-circle"></div>
+                <p class="percentage">0%</p>
+              </div>
+          </div>
+    </div>
+
+    <div class="items">
+        <div id="scanimage"><img src="/All_Images/nutella.jpg" alt=""></div>
+        <div id="scaninfo">
+            <div><h1>Nutella</h1></div><br>
+            <div class="sub_info"><i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star' style='color:#ffd700'  ></i>
+                <i class='bx bxs-star-half' style='color:#ffd700' ></i>
+                <!-- <i class='bx bx-star' style='color:#ffd700' ></i> -->
+            </div><br>
+            <div class="sub_info"><p>Age: Above 2 Years</p></div><br>
+            <div class="sub_info"><p>Consumption Time: Morning</p></div><br>
+            <div class="healthiness" >
+                <i class='bx bxs-circle' style='color:#008000'  ></i>
+                <h2 style='color:#008000'> Excellent</h2> 
+            </div>
+            <!-- <i class='bx bxs-circle' style='color:#008000'  ></i>
+    <i class='bx bxs-circle' style='color:#0000ff'  ></i>
+    <i class='bx bxs-circle' style='color:#ff0000'  ></i> -->
+        </div>
+        <div class="ppercentage">
+          <p class="perp">Heathiness Ratings: </p>
+          <!-- <img id="img2" src="/All_Images/90 percentage2.jpg" alt=""> -->
+          <div class="circular-progress" data-inner-circle-color="#fff" data-percentage="90" data-progress-color="#3F7229" data-bg-color="whitesmoke">
+            <div class="inner-circle"></div>
+            <p class="percentage">0%</p>
+          </div>
+        </div>
+    </div>
+    <% include ./partials/footer.ejs %>
+    <script>
+        const circularProgress = document.querySelectorAll(".circular-progress");
+
+Array.from(circularProgress).forEach((progressBar) => {
+  const progressValue = progressBar.querySelector(".percentage");
+  const innerCircle = progressBar.querySelector(".inner-circle");
+  let startValue = 0,
+    endValue = Number(progressBar.getAttribute("data-percentage")),
+    speed = 50,
+    progressColor = progressBar.getAttribute("data-progress-color");
+
+  const progress = setInterval(() => {
+    startValue++;
+    progressValue.textContent = `${startValue}%`;
+    progressValue.style.color = `${progressColor}`;
+
+    innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+      "data-inner-circle-color"
+    )}`;
+
+    progressBar.style.background = `conic-gradient(${progressColor} ${
+      startValue * 3.6
+    }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
+    if (startValue === endValue) {
+      clearInterval(progress);
+    }
+  }, speed);
+});
+
+      </script>
+</body>
+</html>
